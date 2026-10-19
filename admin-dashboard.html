@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="img/logo.jpg"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Dashboard — Mlaphi Wa Bathakathi</title><meta name="description" content="Store administration dashboard."></head>
+<body>
+<header class="site-header"><div class="container nav"><a href="index.html" class="brand"><img src="img/logo.jpg" alt=""><span class="gold-text">ADMIN</span></a><button id="logout" class="btn btn-ghost" style="padding:.6rem 1.2rem">Log out</button></div></header>
+<section style="padding-top:3rem"><div class="container">
+<p class="eyebrow">Overview</p><h1 style="font-size:2.8rem;margin:.4rem 0 2rem">Dashboard</h1>
+<div class="stats"><div class="stat"><b id="stat-revenue"></b><span>Revenue</span></div><div class="stat"><b id="stat-orders"></b><span>Orders</span></div><div class="stat"><b id="stat-products"></b><span>Products</span></div><div class="stat"><b>4.9</b><span>Rating</span></div></div>
+<div class="admin-grid"><div>
+<h2>Recent Orders</h2><div class="table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Total</th><th>Status</th></tr></thead><tbody id="orders-body"></tbody></table></div>
+<h2>Inventory</h2><div class="table-wrap"><table><thead><tr><th></th><th>Product</th><th>Category</th><th>Price</th><th>Stock</th></tr></thead><tbody id="inv-body"></tbody></table></div>
+</div>
+<form id="product-form" class="form-card" style="align-self:start"><h2>Add Product</h2>
+<div class="field"><label>Name</label><input name="pname" required></div>
+<div class="two"><div class="field"><label>Price (R)</label><input type="number" name="pprice" min="1" required></div><div class="field"><label>Stock</label><input type="number" name="pstock" min="0" required></div></div>
+<div class="field"><label>Category</label><select name="pcat"><option>Healing</option><option>Spiritual</option><option>Cleansing</option><option>Protection</option><option>Body</option><option>Wellness</option></select></div>
+<div class="field"><label>Image URL</label><input name="pimg" placeholder="img/p1.jpg"></div>
+<div class="field"><label>Description</label><textarea name="pdesc" rows="3" required></textarea></div>
+<button class="btn btn-gold btn-block">Add Product</button></form>
+</div></div></section>
+<script src="script.js"></script>
+</body></html>

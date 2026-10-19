@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="img/logo.jpg"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><title>Checkout — Mlaphi Wa Bathakathi</title><meta name="description" content="Secure checkout with Paxi delivery and Yoco payment."></head>
+<body>
+<div id="site-header"></div>
+<div class="page-hero container"><p class="eyebrow">Almost There</p><h1>Checkout</h1><div class="divider">◆</div></div>
+<section style="padding-top:1rem"><div class="container">
+<form id="checkout-form" class="cart-wrap">
+<div class="form-card"><h2>Delivery Details</h2>
+<div class="field"><label>Full Name</label><input name="name" required></div>
+<div class="two"><div class="field"><label>Email</label><input type="email" name="email" required></div>
+<div class="field"><label>Phone</label><input type="tel" name="phone" required></div></div>
+<div class="field"><label>Address</label><textarea name="address" rows="3" required></textarea></div>
+<div class="field"><label>Paxi Shipping</label><select id="shipping" required>
+<option value="59.95">Paxi Standard (7–9 days) — R 59.95</option>
+<option value="109.95">Paxi Large Bag (7–9 days) — R 109.95</option>
+<option value="99.95">Paxi Express (3–5 days) — R 99.95</option></select></div>
+</div>
+<aside class="summary"><h2>Payment</h2>
+<div class="yoco"><div class="yoco-head"><span>Card Payment</span><span class="yoco-badge">yoco</span></div>
+<div class="field"><label>Card Number</label><input id="card" inputmode="numeric" placeholder="1234 5678 9012 3456" required minlength="19"></div>
+<div class="two"><div class="field"><label>Expiry</label><input id="expiry" placeholder="MM/YY" required minlength="5"></div>
+<div class="field"><label>CVV</label><input inputmode="numeric" maxlength="4" placeholder="123" required></div></div></div>
+<div class="sum-row"><span>Subtotal</span><span id="co-sub"></span></div>
+<div class="sum-row"><span>Shipping</span><span id="co-ship"></span></div>
+<div class="sum-row total"><span>Total</span><span class="price" id="co-total"></span></div>
+<button class="btn btn-gold btn-block" type="submit">Pay Now</button>
+<p style="text-align:center;font-size:.72rem;color:var(--muted);margin-top:1rem">🔒 Secured by Yoco · Demo only</p>
+</aside></form></div></section>
+<div class="overlay"><div><div class="spinner"></div><p class="eyebrow">Processing payment…</p></div></div>
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body></html>
